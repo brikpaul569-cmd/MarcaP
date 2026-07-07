@@ -1,0 +1,29 @@
+[
+  {
+    "id": "prodius",
+    "title": "Prodius",
+    "description": "AI-powered music production assistant that helps composers generate chord progressions, arrange tracks, and master final mixes using machine learning models.",
+    "technologies": ["Python", "TensorFlow", "React", "FastAPI"],
+    "link": "https://github.com/brikpaul569-cmd/prodius",
+    "image": "",
+    "featured": true
+  },
+  {
+    "id": "audiomotion",
+    "title": "AudioMotion",
+    "description": "Real-time audio visualization tool that transforms sound into dynamic, customizable visual displays using WebGL and Web Audio API for immersive listening experiences.",
+    "technologies": ["TypeScript", "WebGL", "Web Audio API", "Next.js"],
+    "link": "https://github.com/brikpaul569-cmd/audiomotion",
+    "image": "",
+    "featured": true
+  },
+  {
+    "id": "marcap",
+    "title": "MarcaP",
+    "description": "Personal brand site and creative portfolio that embodies the fusion of software architecture and music composition through immersive design and GSAP-driven interactions.",
+    "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "GSAP"],
+    "link": "https://github.com/brikpaul569-cmd/marcap",
+    "image": "",
+    "featured": true
+  }
+]

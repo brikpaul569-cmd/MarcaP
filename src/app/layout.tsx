@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { spaceMono, inter, jetbrainsMono } from '@/lib/fonts'
+import { Footer } from '@/components/sections/Footer'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -33,8 +34,9 @@ export default function RootLayout({
       lang="en"
       className={`${spaceMono.variable} ${inter.variable} ${jetbrainsMono.variable}`}
     >
-      <body className="min-h-screen bg-deep-space text-light-grey font-sans antialiased">
+      <body className="min-h-screen bg-deep-space text-light-grey font-sans antialiased flex flex-col">
         {children}
+        <Footer />
       </body>
     </html>
   )
