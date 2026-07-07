@@ -1,0 +1,44 @@
+[
+  {
+    "year": 2015,
+    "title": "First Code Line",
+    "description": "Wrote the first line of code that started it all. What began as curiosity turned into an obsession with building systems.",
+    "type": "code"
+  },
+  {
+    "year": 2018,
+    "title": "First Music Production",
+    "description": "Discovered electronic music production. The same patterns that made code elegant found their way into harmonic progression and sound design.",
+    "type": "music"
+  },
+  {
+    "year": 2020,
+    "title": "First AI Project",
+    "description": "Built the first machine learning experiment. The intersection of logic and pattern recognition opened a new dimension of creation.",
+    "type": "ai"
+  },
+  {
+    "year": 2023,
+    "title": "The Fusion Moment",
+    "description": "The realization that software architecture and musical composition are the same discipline — structuring complexity into something beautiful.",
+    "type": "milestone"
+  },
+  {
+    "year": 2024,
+    "title": "Public Release",
+    "description": "First public releases on Spotify. Code and sound finally converged into a single creative identity.",
+    "type": "music"
+  },
+  {
+    "year": 2025,
+    "title": "Current Momentum",
+    "description": "Full-stack development at scale. Music production refined. The two worlds no longer separate — they're the same craft.",
+    "type": "code"
+  },
+  {
+    "year": 2026,
+    "title": "What's Next",
+    "description": "A new chapter. The release that merges everything. This site is just the beginning.",
+    "type": "milestone"
+  }
+]
