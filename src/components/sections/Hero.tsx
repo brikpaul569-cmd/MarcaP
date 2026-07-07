@@ -3,14 +3,23 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { easing } from '@/lib/animations/easing-functions'
+import { useParallax } from '@/hooks/useParallax'
 
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(null)
+  const bgRef = useRef<HTMLDivElement>(null)
   const titleRef = useRef<HTMLHeadingElement>(null)
   const subtitleRef = useRef<HTMLParagraphElement>(null)
   const scrollIndicatorRef = useRef<HTMLDivElement>(null)
 
+  useParallax({
+    triggerRef: bgRef,
+    translateY: [-20, 20],
+  })
+
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: easing.entrance } })
 
@@ -37,25 +46,26 @@ export function Hero() {
   return (
     <section
       ref={containerRef}
+      id="hero"
+      aria-label="Hero"
       className="relative flex min-h-screen items-center justify-center overflow-hidden bg-deep-space"
     >
+      <div
+        ref={bgRef}
+        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-neon-cyan/5 to-transparent"
+        aria-hidden="true"
+      />
       <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
         <h1
           ref={titleRef}
-          className="font-display text-4xl font-bold tracking-[0.05em] text-light-grey sm:text-5xl md:text-6xl lg:text-7xl"
+          className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
         >
-          Software Architect
-          <br />
-          <span className="bg-gradient-to-r from-neon-cyan to-pulsing-magenta bg-clip-text text-transparent">
-            by day.
+          <span className="bg-gradient-to-r from-[#00D9FF] to-[#0088FF] bg-clip-text text-transparent">
+            Brikman Paul Morales
           </span>
-        </h1>
-
-        <h1 className="mt-4 font-display text-4xl font-bold tracking-[0.05em] text-light-grey sm:text-5xl md:text-6xl lg:text-7xl">
-          Electronic Composer
           <br />
-          <span className="bg-gradient-to-r from-warm-amber to-neon-cyan bg-clip-text text-transparent">
-            by night.
+          <span className="text-light-grey">
+            Software Architect &amp; Electronic Composer
           </span>
         </h1>
 

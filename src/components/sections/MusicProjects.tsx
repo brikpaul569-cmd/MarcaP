@@ -21,6 +21,8 @@ export function MusicProjects() {
   const hasReleases = typedReleases.length > 0
 
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
         defaults: { ease: easing.cinematic },
@@ -50,6 +52,7 @@ export function MusicProjects() {
     <section
       ref={sectionRef}
       id="music"
+      aria-label="Music Releases"
       className="relative py-32"
     >
       <Container>

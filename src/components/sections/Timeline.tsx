@@ -33,6 +33,8 @@ export function Timeline() {
   const pointsRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
         scrollTrigger: {
@@ -59,6 +61,7 @@ export function Timeline() {
     <section
       ref={sectionRef}
       id="timeline"
+      aria-label="Timeline"
       className="relative py-32"
     >
       <Container>

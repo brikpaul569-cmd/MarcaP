@@ -11,6 +11,8 @@ export function About() {
   const bodyRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
         defaults: { ease: easing.cinematic },
@@ -36,6 +38,7 @@ export function About() {
     <section
       ref={sectionRef}
       id="about"
+      aria-label="About"
       className="relative py-32"
     >
       <Container>

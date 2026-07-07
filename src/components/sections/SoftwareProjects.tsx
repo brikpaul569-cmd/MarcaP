@@ -19,6 +19,8 @@ export function SoftwareProjects() {
   const gridRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
         defaults: { ease: easing.cinematic },
@@ -45,6 +47,7 @@ export function SoftwareProjects() {
     <section
       ref={sectionRef}
       id="software"
+      aria-label="Software Projects"
       className="relative py-32"
     >
       <Container>

@@ -28,6 +28,8 @@ export function Contact() {
   const [submitStatus, setSubmitStatus] = useState<{ type: 'success' | 'error'; message: string } | null>(null)
 
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
         defaults: { ease: easing.cinematic },
@@ -61,7 +63,7 @@ export function Contact() {
   }
 
   return (
-    <section ref={sectionRef} id="contact" className="relative py-32">
+    <section ref={sectionRef} id="contact" aria-label="Contact" className="relative py-32">
       <Container>
         <p className="font-mono text-sm tracking-[0.1em] text-neon-cyan">05 — CONTACT</p>
         <h2
@@ -128,6 +130,8 @@ export function Contact() {
           {/* Status */}
           {submitStatus && (
             <div
+              role="status"
+              aria-live="polite"
               className={`p-4 rounded-lg font-mono text-sm ${
                 submitStatus.type === 'success'
                   ? 'bg-green-500/10 border border-green-500/30 text-green-400'

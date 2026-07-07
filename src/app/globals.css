@@ -48,3 +48,13 @@ body {
   background-color: var(--color-neon-cyan);
   color: var(--color-deep-space);
 }
+
+@layer base {
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid var(--color-neon-cyan);
+    outline-offset: 2px;
+  }
+}
