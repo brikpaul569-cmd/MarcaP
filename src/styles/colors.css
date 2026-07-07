@@ -1,0 +1,15 @@
+:root {
+  --color-deep-space: #0F1419;
+  --color-neon-cyan: #00D9FF;
+  --color-warm-amber: #FFB800;
+  --color-pulsing-magenta: #FF00FF;
+  --color-dark-grey: #1A1F2E;
+  --color-light-grey: #E8EAED;
+  --color-accent-blue: #4A90FF;
+  --color-deep-magenta: #8B00FF;
+
+  --gradient-cyber-pulse: linear-gradient(135deg, var(--color-neon-cyan), var(--color-pulsing-magenta));
+  --gradient-sonic-wave: linear-gradient(45deg, var(--color-warm-amber), var(--color-neon-cyan));
+  --gradient-depth-void: radial-gradient(circle, var(--color-deep-space), var(--color-deep-magenta));
+  --gradient-human-touch: linear-gradient(180deg, var(--color-warm-amber), var(--color-deep-space));
+}
